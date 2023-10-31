@@ -36,7 +36,11 @@ public class JdbcCarsDao implements CarsDao {
     }
 
     @Override
+<<<<<<< HEAD
     public Cars getById(int carId){
+=======
+    public Cars getCarById(int carId){
+>>>>>>> d4447df (Initial commit)
         String sql = "Select * From cars where car_id = ?";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, carId);
         if (results.next()) {
