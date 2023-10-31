@@ -8,5 +8,9 @@ public interface CarsDao {
 
     List<Cars> getCars();
 
-    Cars getById(int carId);
+    Cars getCarById(int carId);
+
+    int insert(Cars car);
+
+    void delete(int carId);
 }

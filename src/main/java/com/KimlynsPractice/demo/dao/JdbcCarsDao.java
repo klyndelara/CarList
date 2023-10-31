@@ -32,15 +32,11 @@ public class JdbcCarsDao implements CarsDao {
         }catch (CannotGetJdbcConnectionException e) {
             System.out.println(e.getMessage());
         }
-            return cars;
+        return cars;
     }
 
     @Override
-<<<<<<< HEAD
-    public Cars getById(int carId){
-=======
     public Cars getCarById(int carId){
->>>>>>> d4447df (Initial commit)
         String sql = "Select * From cars where car_id = ?";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, carId);
         if (results.next()) {
@@ -49,6 +45,23 @@ public class JdbcCarsDao implements CarsDao {
             return null;
         }
     }
+    @Override
+    public int insert (Cars car) {
+        String sql = "Insert into cars(model, make) values (?,?) returning car_id";
+        int newCarId = jdbcTemplate.queryForObject(sql, int.class, car.getModel(), car.getMake());
+        return newCarId;
+    }
+
+
+
+    @Override
+    public void delete (int carId) {
+        String sql = "Delete from memberscar where car_id = ?";
+        jdbcTemplate.update(sql, carId);
+        sql = "Delete from cars where car_id = ?";
+        jdbcTemplate.update(sql, carId);
+    }
+
     private Cars mapRowToCars (SqlRowSet rowSet){
         Cars cars = new Cars();
         cars.setCarId(rowSet.getInt("car_id"));

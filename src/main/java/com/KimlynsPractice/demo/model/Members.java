@@ -19,6 +19,10 @@ public class Members {
         this.zipCode = zipCode;
     }
 
+    public Members() {
+
+    }
+
     public int getMembersId() {
         return membersId;
     }
