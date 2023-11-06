@@ -5,19 +5,17 @@ public class Cars {
     private String model;
     private String make;
 
-    public Cars (int carId, String model, String make) {
-        this.carId = carId;
-        this.model = model;
-        this.make = make;
-    }
+//    public Cars (int carId, String model, String make) {
+//        this.carId = carId;
+//        this.model = model;
+//        this.make = make;
+//    }
 
 
 
 
 
-    public Cars(){
-
-    }
+    public Cars(){}
 
     public int getCarId(){
         return carId;

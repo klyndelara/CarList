@@ -3,15 +3,19 @@ package com.KimlynsPractice.demo.model;
 public class MembersCar {
     private int memberCarId;
     private int memberId;
-    private int car_id;
+    private int carId;
 
     private String color;
 
-    public MembersCar(int memberCarId, int memberId, int car_id, String color) {
+    public MembersCar(int memberCarId, int memberId, int carId, String color) {
         this.memberCarId = memberCarId;
         this.memberId = memberId;
-        this.car_id = car_id;
+        this.carId = carId;
         this.color = color;
+    }
+
+    public MembersCar() {
+
     }
 
     public int getMemberCarId() {
@@ -30,12 +34,12 @@ public class MembersCar {
         this.memberId = memberId;
     }
 
-    public int getCar_id() {
-        return car_id;
+    public int getCarId() {
+        return carId;
     }
 
-    public void setCar_id(int car_id) {
-        this.car_id = car_id;
+    public void setCarId(int carId) {
+        this.carId = carId;
     }
 
     public String getColor() {
