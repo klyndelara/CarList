@@ -21,7 +21,7 @@ public class MembersCarController {
 @RequestMapping(path = " ", method = RequestMethod.GET)
 public List<MembersCar> getMembersCar() { return membersCarDao.getMembersCar(); }
 
-@RequestMapping(path = " ", method = RequestMethod.GET)
+@RequestMapping(path = "/{id} ", method = RequestMethod.GET)
 public MembersCar getMemberByMemberCarId(@PathVariable int id) {
         MembersCar membersCar = membersCarDao.getMemberByMemberCarId(id);
         if(membersCar == null) {
