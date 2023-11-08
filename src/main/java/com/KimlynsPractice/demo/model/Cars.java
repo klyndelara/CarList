@@ -1,5 +1,7 @@
 package com.KimlynsPractice.demo.model;
 
+//This is a model class, which is used to hold data translated from SqlRowSets into Java object form.
+//The model name matches the table name in the database, and the properties of this model match the columns of that database table.
 public class Cars {
     private int carId;
     private String model;
