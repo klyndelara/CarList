@@ -13,8 +13,8 @@ import java.util.List;
 @CrossOrigin
 
 public class MemberController {
-
-    private MembersDao membersDao; {
+    private MembersDao membersDao;
+    private MemberController (MembersDao membersDao) {
         this.membersDao = membersDao;
     }
 

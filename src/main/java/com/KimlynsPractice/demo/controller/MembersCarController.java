@@ -14,7 +14,8 @@ import java.util.List;
 @CrossOrigin
 public class MembersCarController {
 
-    private MembersCarDao membersCarDao; {
+    private MembersCarDao membersCarDao;
+    private MembersCarController (MembersCarDao membersCarDao){
         this.membersCarDao = membersCarDao;
     }
 
